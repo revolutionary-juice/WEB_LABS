@@ -1,0 +1,17 @@
+extends template
+
+block nav
+  div.nav
+    h4.nav__title= title
+    div.nav__menu
+      +createMenu(dictMenu, 'Список игр')
+    
+block content
+  div.content
+    div.content__title
+      h2 Список популярных игр в 2025 год
+    
+    div.content__information
+      +createFilters()
+      +createList(listInfo.header, listInfo.rows)
+      
